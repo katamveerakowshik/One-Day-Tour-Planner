@@ -20,9 +20,9 @@ with st.form("tour_form"):
         date = st.date_input("📅 Trip Date",
                              min_value=datetime.date.today())
         interests = st.multiselect("❤️ Interests",
-                                   ["Historical Sites", "Food", "Shopping", "Nature", "Adventure", "Sports"],
+                                   ["Historical Sites", "Food", "Religion", "Nature", "Adventure", "Sports", 'Shopping'],
                                    help="Select at least 1 interest")
-        starting_point = st.text_input("🏨 Starting Location")
+
 
     with col2:
         start_time = st.time_input("⏰ Start Time",
@@ -30,7 +30,7 @@ with st.form("tour_form"):
         end_time = st.time_input("⏱️ End Time",
                                  datetime.time(21, 0),
                                  help="Must be later than start time")
-        budget = st.number_input("💰 Budget (per person) in $")
+        starting_point = st.text_input("🏨 Starting Location")
 
 
     # Form validation
@@ -50,7 +50,6 @@ with st.form("tour_form"):
                 "start_time": start_time,
                 "end_time": end_time,
                 "interests": interests,
-                "budget": budget,
                 "starting_point": starting_point
             })
 
@@ -63,10 +62,10 @@ if st.session_state.form_submitted:
     with st.spinner("⚡ Optimizing your itinerary..."):
         itinerary = generate_itinerary(
             user_memory["city"],
+            user_memory['date'],
             user_memory["start_time"],
             user_memory["end_time"],
             user_memory["interests"],
-            user_memory["budget"],
             user_memory["starting_point"]
         )
         print(itinerary)
