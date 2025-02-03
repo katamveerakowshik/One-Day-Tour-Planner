@@ -2,7 +2,7 @@ import requests
 from Agents.passwrds import places_api
 
 def places(long, lat, interests):
-    common = ['service', 'tourism', 'public_transport']
+    common = ['tourism']
     interests = interests + common
     str_interests = ','.join(f"{interest}" for interest in interests)
     response = requests.get(f"https://api.geoapify.com/v2/places?categories={str_interests}&filter=circle:{long},{lat},5000&limit=100&apiKey={places_api}")
