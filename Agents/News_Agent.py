@@ -9,4 +9,4 @@ def news_forecast(city,to_date):
         description.append(article["description"])
     return description
 
-print(news_forecast('delhi','2025-03-25'))
+# print(news_forecast('delhi','2025-03-25'))

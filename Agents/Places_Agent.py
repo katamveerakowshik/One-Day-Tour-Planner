@@ -14,4 +14,4 @@ def places(long, lat, interests):
         places.append([place_name, place_lon, place_lat])
     return places
 
-print(places('77.22445','28.63576', ['sport', 'ski'] ))
+# print(places('77.22445','28.63576', ['sport', 'ski'] ))

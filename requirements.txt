@@ -1,2 +1,4 @@
 openai == 1.60.2
 streamlit == 1.41.1
+geopy == 2.4.1
+folium == 0.19.4
