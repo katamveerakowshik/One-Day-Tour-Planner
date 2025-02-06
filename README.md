@@ -1,6 +1,6 @@
 # One-Day Tour Planner
 
-The **One-Day Tour Planner** is an intelligent application designed to create personalized one-day travel itineraries. It leverages multiple APIs and advanced AI models for itinerary generation, weather updates, local attractions, and news highlights. The app is built using **Streamlit** for the frontend and integrates the **DeepSeekr1:1.5b** model for itinerary creation.
+The **One-Day Tour Planner** is an intelligent application designed to create personalized one-day travel itineraries. It leverages multiple APIs and advanced AI models for itinerary generation, weather updates, local attractions, and news highlights. The app is built using **Streamlit** for the frontend and integrates the **DeepSeekr1:7b** model for itinerary creation.
 
 ## Features
 - **Itinerary Generation**: Powered by the DeepSeekr1:1.5b model, which uses real-time data to craft customized travel plans.
@@ -30,6 +30,7 @@ streamlit run main.py
 ## Requirements
 - Python 3.x
 - Internet connection for fetching API data
+- API tokens need to generated before running the application
 
 ## APIs Used
 - **OpenWeather API**: For real-time weather updates.
